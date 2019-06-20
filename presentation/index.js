@@ -3,15 +3,12 @@ import React from 'react';
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   Image,
   List,
   ListItem,
-  Notes,
-  Quote,
+  Link,
   Slide,
   Text,
   S,
@@ -21,8 +18,9 @@ import {
 import createTheme from 'spectacle/lib/themes/default';
 
 const images = {
+  bigbru: require('../assets/bigbru.png'),
+  owasplogo: require('../assets/owasplogo.png'),
   formidagon: require('../assets/formidable-logo.svg'),
-  goodWork: require('../assets/good-work.gif'),
 };
 
 // Require CSS
@@ -30,10 +28,10 @@ require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quaternary: '#CECECE'
+    primary: '#fffcff',
+    secondary: '#2c363f',
+    tertiary: '#2274a5',
+    quaternary: '#e75a7c',
   },
   {
     primary: 'Helvetica',
@@ -50,6 +48,7 @@ export default class Presentation extends React.Component {
         theme={theme}
       >
         <Slide transition={['zoom']} bgColor="primary">
+          <Image src={images.owasplogo} width={150} />
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             OWASP Foundation
           </Heading>
@@ -78,48 +77,48 @@ export default class Presentation extends React.Component {
             OWhut ?
           </Heading>
         </Slide>
-        <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+        <Slide transition={['spin']} bgColor="secondary">
+          <Heading size={2} textColor="tertiary" caps>
             OPEN
           </Heading>
         </Slide>
-        <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+        <Slide transition={['spin']} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
             WEB
           </Heading>
         </Slide>
-        <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+        <Slide transition={['spin']} bgColor="secondary">
+          <Heading size={2} textColor="quaternary" caps>
             APPLICATION
           </Heading>
         </Slide>
-        <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+        <Slide transition={['spin']} bgColor="secondary">
+          <Heading size={2} textColor="tertiary" caps>
             SECURITY
           </Heading>
         </Slide>
-        <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+        <Slide transition={['spin']} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
             PIZZA 🍕
           </Heading>
         </Slide>
-        <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+        <Slide transition={['spin']} bgColor="secondary">
+          <Heading size={2} textColor="quaternary" caps>
             PIZZA ?
           </Heading>
         </Slide>
-        <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+        <Slide transition={['spin']} bgColor="secondary">
+          <Heading size={2} textColor="tertiary" caps>
             <S type="strikethrough">PIZZA</S>
           </Heading>
         </Slide>
-        <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+        <Slide transition={['spin']} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
             🔥PROJECT🔥
           </Heading>
         </Slide>
         <Slide transition={['spin']} bgColor="primary">
-          <Heading size={2} textColor="secondary" caps>
+          <Heading size={2} textColor="quaternary" caps>
             ✨Open Web Application Security Project✨
           </Heading>
         </Slide>
@@ -133,53 +132,111 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>
-            Standard List
+            Build around Core Values
           </Heading>
           <List>
-            <ListItem bulletStyle="star">Item 1</ListItem>
-            <ListItem bulletStyle="cross">Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem bulletStyle="star">OPEN</ListItem>
+            <ListItem bulletStyle="star">INNOVATION</ListItem>
+            <ListItem bulletStyle="star">GLOBAL</ListItem>
+            <ListItem bulletStyle="star">INTEGRITY</ListItem>
           </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite margin="10px 0 0 30px">Author</Cite>
-          </BlockQuote>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>
+            Alright alright, but what are you doing ?
+          </Heading>
+          <List>
+            <ListItem bulletStyle="1f441">
+              Make software security visible
+            </ListItem>
+            <ListItem bulletStyle="1f4a1">
+              Help organizations to conceive, develop, acquire, operate, and
+              maintain applications that can be trusted
+            </ListItem>
+            <ListItem bulletStyle="1f6e0">Develop tools</ListItem>
+          </List>
         </Slide>
-        <Slide>
-          <Image src={images.goodWork} width={500} />
-          <Notes>gifs work too</Notes>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>
+            Who cares ?
+          </Heading>
+          <Text margin="20px 0 0" textColor="tertiary" fit bold>
+            IEEE, NSA 👁, ANSSI, BSI, W3C, AND...
+          </Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>
+            You should care too, you know why ?
+          </Heading>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://latesthackingnews.com/category/cyber-security-news/"
+          >
+            💻
+          </Link>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>
+            OWASP is here to help you to understand all this gibberish
+          </Heading>
+          <Text margin="20px 0 0" textColor="tertiary" fit bold>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.owasp.org/index.php/Category:OWASP_Project#tab=Project_Inventory"
+            >
+              We have projects !
+            </Link>
+          </Text>
+          <Text margin="20px 0 0" textColor="tertiary" fit bold>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.owasp.org/index.php/Category:How_To"
+            >
+              Ressources to learn and try about web applications vulnerabilities
+            </Link>
+          </Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>
+            Get involved !
+          </Heading>
+          <Text margin="20px 0 0" textColor="tertiary" fit bold>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.owasp.org/index.php/OWASP_Chapter"
+            >
+              Join you local chapter
+            </Link>
+          </Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>
+            Have questions ?
+          </Heading>
+          <Text margin="20px 0 0" textColor="tertiary" fit bold>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://owasp.slack.com/join/shared_invite/enQtNjExMTc3MTg0MzU4LTViMDg1MmJiMzMwZGUxZjgxZWQ1MTE0NTBlOTBhNjhhZDIzZTZiNmEwOTJlYjdkMzAxMGVhNDkwNDNiNjZiOWQ"
+            >
+              Join the slack channel and get answers from security enthousiast
+              to security experts !
+            </Link>
+          </Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>
+            And remember
+          </Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Image src={images.bigbru} width={400} />
         </Slide>
       </Deck>
     );
   }
 }
-
-/* <Slide bgColor="secondary">
-          <Image src={images.formidagon} width={200} />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
-        </Slide> */
